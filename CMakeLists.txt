@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.6)
 
-set(PYTHON_VERSION "3.6.4" CACHE STRING "The version of Python to build.")
+set(PYTHON_VERSION "2.7.6" CACHE STRING "The version of Python to build.")
 
 string(REPLACE "." ";" VERSION_LIST ${PYTHON_VERSION})
 list(GET VERSION_LIST 0 PY_VERSION_MAJOR)
@@ -42,7 +42,7 @@ include(CTest)
 
 # Options
 option(DOWNLOAD_SOURCES "Automatically download the Python sources" ON)
-set(_build_libpython_shared_default  0)
+set(_build_libpython_shared_default  1)
 set(_build_libpython_shared_desc "Build libpython as a shared library")
 
 if(DEFINED BUILD_SHARED OR DEFINED BUILD_STATIC)
